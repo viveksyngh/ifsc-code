@@ -1,7 +1,7 @@
 /Data/XLS/*.xls
 /Data/JSON/*.json
 /Data/IFSC_LIST.json
-/Data/ifsc_code_urls.json
+/Data/ifsc_code_url.json
 /Data/abbr_url_list.json
 /Scripts/*.pyc
 .DS_Store
