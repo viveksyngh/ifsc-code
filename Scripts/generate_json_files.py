@@ -10,7 +10,7 @@ def generate_json_files():
 	if not os.path.exists(JSON_DIR): # If Json directory not exists
 		os.mkdir(JSON_DIR) # Make directory
 	
-	bank_urls = load_from_a_file(ABBR_URL_LIST)
+	bank_urls = load_from_a_file(BANK_NAME_FILE_URL_JOSN)
 	master_ifsc_list = []
 	
 	for key in bank_urls.keys():
@@ -22,7 +22,7 @@ def generate_json_files():
 			rows = work_sheet.nrows
 			ifsc_list = []
 			
-			for row in range(rows):
+			for row in range(1, rows):
 				item = {}
 				# Generating dictionary with key value pair
 				for col, key in enumerate(FIELD_NAMES): 

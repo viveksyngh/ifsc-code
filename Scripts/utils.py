@@ -8,23 +8,21 @@ def write_content(content, file_path):
     """Writes content to a file, on a given file path."""
     if not os.path.exists(TEMP_DIR):
         os.mkdir(TEMP_DIR)
-    html_file = open(file_path, 'w')
-    html_file.write(content)
-    html_file.close()
+    with open(file_path, 'w') as html_file:
+        html_file.write(content)
 
 
 def dump_to_file(data, file_path):
     """Dump data to file as JSON"""
-    file = open(file_path, 'w')
-    json.dump(data, file, indent=4)
-    file.close()
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4)
 
 
 def load_from_a_file(file_path):
     """Loads json content from a file and returns  it."""
-    file = open(file_path, 'r')
-    try:
-        data = json.load(file)
-    except ValueError, e:
-        data = {}
+    with open(file_path, 'r') as file:
+        try:
+            data = json.load(file)
+        except ValueError, e:
+            data = {}
     return data

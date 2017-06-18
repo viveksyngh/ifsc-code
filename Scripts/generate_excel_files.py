@@ -24,7 +24,7 @@ def download_excel_files():
 	to a file. 
 	"""
 	
-	bank_urls = load_from_a_file(ABBR_URL_LIST)
+	bank_urls = load_from_a_file(BANK_NAME_FILE_URL_JOSN)
 	for bank, url in bank_urls.items():
 		print bank, url
 		download_file(url, bank)

@@ -13,11 +13,6 @@ HEADERS = {
 FIELD_NAMES = ['BANK', 'IFSC', 'MICR', 'BRANCH', 'ADDRESS', 'CONTACT', 'CITY', 'DISTRICT', 'STATE']
 JSON_DIR = DATA_DIR + '/JSON/'
 XLS_DIR = DATA_DIR + '/XLS/'
-ABBR_URL_LIST = DATA_DIR + '/abbr_url_list.json'
 MASTER_IFSC_LIST_FILE = DATA_DIR + "/IFSC_LIST.json"
 BANK_LIST_HTML_FILE = TEMP_DIR + "/bank_list.html"
 BANK_NAME_FILE_URL_JOSN = DATA_DIR + "/ifsc_code_url.json"
-ABBR_BANK_NAME_FILE_URL = DATA_DIR + "/abbr_url_list.json"
-BANK_NAME_JSON_FILE = DATA_DIR + '/banknames.json'
-
-

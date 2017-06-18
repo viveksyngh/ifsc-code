@@ -31,18 +31,11 @@ def parse_links_from_HTML():
     soup = BeautifulSoup(file_content)
     table_content = soup.find('table', class_='tablebg')
     anchor_links = table_content.find_all('a')
-    
-    abbr_map = load_from_a_file(BANK_NAME_JSON_FILE)
-    bank_links, urls_list = {}, {}
+
+    bank_links = {}
     for anchor_link in anchor_links:
         bank_links[str(anchor_link.text)] = anchor_link.get('href')
-    for abbr, bank_name in abbr_map.items():
-        if bank_name not in bank_links:
-            print "{0} bank from RBI list".format(bank_name)
-        else:
-            urls_list[abbr] = bank_links[bank_name]
     dump_to_file(bank_links, BANK_NAME_FILE_URL_JOSN)
-    dump_to_file(urls_list, ABBR_BANK_NAME_FILE_URL)
 
 
 def parse_urls():
