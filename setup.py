@@ -8,7 +8,7 @@ setup(
       author = 'Vivek Singh',
       author_email = 'vivekkmr45@yahoo.in',
       url = 'https://github.com/viveksyngh/ifsc-code',
-      download_url='https://github.com/viveksyngh/ifsc-code/archive/0.1.tar.gz',
+      download_url='https://github.com/viveksyngh/ifsc-code/archive/0.2.tar.gz',
       keywords = ['Bank IFSC code', 'IFSC Code', 'IFSC'],
       classifiers = [],
       platforms = ['Any'],
