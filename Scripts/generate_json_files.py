@@ -6,18 +6,22 @@ from utils import *
 from constants import *
 
 
-def generate_json_files():
+def generate_json_files(bank_urls, out_dir, verbose):
+	JSON_DIR = out_dir + "/JSON/"
+	XLS_DIR = out_dir + "/XLS/"
+	MASTER_IFSC_LIST_FILE = out_dir + "/IFSC_LIST.json"
+
 	if not os.path.exists(JSON_DIR): # If Json directory not exists
 		os.mkdir(JSON_DIR) # Make directory
 	
-	bank_urls = load_from_a_file(BANK_NAME_FILE_URL_JOSN)
 	master_ifsc_list = []
 	
 	for key in bank_urls.keys():
 		json_file_path = JSON_DIR + key + ".json"
 		try:
 			wb = xlrd.open_workbook(XLS_DIR + key + '.xls')
-			print key
+			if verbose:
+				print key
 			work_sheet = wb.sheet_by_index(0)
 			rows = work_sheet.nrows
 			ifsc_list = []

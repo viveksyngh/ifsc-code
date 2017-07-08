@@ -1,11 +1,10 @@
 import os
 import json
 
-from constants import TEMP_DIR
-
 
 def write_content(content, file_path):
     """Writes content to a file, on a given file path."""
+    TEMP_DIR = os.path.dirname(file_path)
     if not os.path.exists(TEMP_DIR):
         os.mkdir(TEMP_DIR)
     with open(file_path, 'w') as html_file:
