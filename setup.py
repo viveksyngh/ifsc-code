@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
       name = 'ifsccode',
       packages = ['ifsccode'], # this must be the same as the name above
-      version = '0.1',
+      version = '0.2',
       description = 'Command line tool for downloading ifsc code',
       author = 'Vivek Singh',
       author_email = 'vivekkmr45@yahoo.in',
