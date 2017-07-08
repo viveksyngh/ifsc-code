@@ -9,7 +9,7 @@ from generate_json_files import generate_json_files
 
 def get_ifsc_code(out_dir, file_type="EXCEL", verbose=False):
     if out_dir and  not os.path.exists(out_dir):
-        raise os.OSError("Output directory %s does not exists"%(out_dir))
+        raise OSError("Output directory %s does not exists"%(out_dir))
     else:
         file_urls = parse_urls()
         download_excel_files(file_urls, out_dir, verbose)
