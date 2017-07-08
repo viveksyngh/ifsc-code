@@ -16,5 +16,9 @@ setup(
       requires = ["BeautifulSoup (==3.2.1)", 
                   "beautifulsoup4 (==4.5.1)",
                   "requests (==2.12.4)",
+                  "xlrd (==1.0.0)"],
+      install_requires = ["BeautifulSoup (==3.2.1)", 
+                  "beautifulsoup4 (==4.5.1)",
+                  "requests (==2.12.4)",
                   "xlrd (==1.0.0)"]
 )
