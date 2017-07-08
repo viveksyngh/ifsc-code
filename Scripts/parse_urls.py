@@ -4,7 +4,7 @@ import json
 from bs4 import BeautifulSoup
 import urllib2
 
-from constants import *
+from constants import RBI_URL, HEADERS
 from utils import *
 
 
@@ -41,5 +41,3 @@ def parse_urls():
     return parse_links_from_HTML(content)  
 
 
-if __name__ == '__main__':
-    parse_urls()

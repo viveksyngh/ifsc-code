@@ -3,9 +3,7 @@ import os
 
 import requests
 
-from constants import *
 from utils import *
-
 
 def download_file(url, file_name, out_dir):
 	"""Downloads file content from url and writes to a file."""
@@ -28,8 +26,4 @@ def download_excel_files(bank_urls, out_dir, verbose):
 		if verbose:
 			print bank, url
 		download_file(url, bank, out_dir)
-
-
-if __name__ == '__main__':
-	download_excel_files()
 

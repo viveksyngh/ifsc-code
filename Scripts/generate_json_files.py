@@ -3,7 +3,7 @@ import json
 import xlrd
 
 from utils import *
-from constants import *
+from constants import FIELD_NAMES
 
 
 def generate_json_files(bank_urls, out_dir, verbose):
@@ -46,6 +46,3 @@ def generate_json_files(bank_urls, out_dir, verbose):
 	# Generating master ifsc code list for all banks
 	dump_to_file(master_ifsc_list, MASTER_IFSC_LIST_FILE)
 
-
-if __name__ == '__main__':
-	generate_json_files()
