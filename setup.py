@@ -7,7 +7,7 @@ setup(
       name = 'ifsccode',
       packages = ['ifsccode'], # this must be the same as the name above
       version = '0.3.2',
-      description = 'Command line tool for downloading ifsc code',
+      description = 'A package for downloading ifsc code of banks',
       author = 'Vivek Singh',
       author_email = 'vivekkmr45@yahoo.in',
       url = 'https://github.com/viveksyngh/ifsc-code',
